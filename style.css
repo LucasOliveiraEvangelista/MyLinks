@@ -26,6 +26,9 @@ body{
     background: var(--bg-color);
     color: var(--color-text);
 }
+html{
+    font-size: 62.5%;
+}
 main{
     width: 100vw;
     height: 100vh;
@@ -46,18 +49,21 @@ input{
 
     background: var(--bg-color);
     color: var(--color-text);
+    
+
 }
 
 #darkmodeToggle:checked + main .darkmodeLabel:after{
     content: " on";
+   
 }
-
 .darkmodeLabel{
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-family: var(--font);
     font-weight: bold;
-    margin: 0 0 550px -100px;
+    /* margin: 100px 0 550px -100px; */
+    padding: 8px;
    
 }
 .darkmodeLabel:after{
@@ -70,7 +76,7 @@ main figure{
     justify-content: center;
 }
 main figure img{
-    border-radius: 50%;
+    border-radius: 5%;
     width: 300px;
     height: 300px;
 }
@@ -82,17 +88,21 @@ main .container .row, main .container .row2{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 18px;
+    margin: 16px 16px 0 0;
+    width: 100%;
 }
-main .container .row .link, main .container .row2 .link, main .container .row .link2, main .container .row2 .link2{
-    width: 14rem;
-    height: 4rem;
+main .container .row .link, 
+main .container .row2 .link, 
+main .container .row .link2,
+main .container .row2 .link2{
+    width: 24rem;
+    height: 6rem;
     /* border: 1px solid #00000028; */
     border: none;
     box-shadow: 4px 3px 4px #00000048;
-    border-radius: 6px;
+    border-radius: 4px;
     background-color: var(--bg-color2);
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     font-family: var(--font);
     font-weight: bold;
     transition: .5s ease-in;
@@ -125,69 +135,98 @@ main .container .row2 .link2:nth-child(1):hover{
     background-color: var(--youtube);
     color: var(--white);
 }
-@media (min-width: 1024px)
-{
-    main .container .row .link, main .container .row2 .link, main .container .row .link2, main .container .row2 .link2{
-        width: 10rem;
-        height: 3rem;
-        font-size: 1.2rem;
+
+@media (max-width: 1255px){
+    main .container .row .link, 
+    main .container .row2 .link, 
+    main .container .row .link2,
+    main .container .row2 .link2{
+        width: 22rem;
     }
 }
-@media (min-width: 768px)
-{
-    main .container .row .link, main .container .row2 .link, main .container .row .link2, main .container .row2 .link2{
-        width: 8rem;
-        height: 3rem;
-        font-size: 1rem;
+
+@media (max-width: 1135px){
+    main .container .row .link, 
+    main .container .row2 .link, 
+    main .container .row .link2,
+    main .container .row2 .link2{
+        width: 20rem;
+}
+}
+@media (max-width: 1050px){
+    main .container .row .link, 
+    main .container .row2 .link, 
+    main .container .row .link2,
+    main .container .row2 .link2{
+        width: 18rem;
+}
+}
+@media (max-width: 930px){
+    main .container .row .link, 
+    main .container .row2 .link, 
+    main .container .row .link2,
+    main .container .row2 .link2{
+        width: 16rem;
+}
+}
+@media (max-width: 840px){
+    main .container .row .link, 
+    main .container .row2 .link, 
+    main .container .row .link2,
+    main .container .row2 .link2{
+        width: 14rem;
+}
+}
+@media (max-width: 725px){
+    body{
+        overflow: hidden;
     }
     main figure img{
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
     }
-    .darkmodeLabel{
-        margin: 0 0 450px -100px;
-    }
-}
-@media (min-width: 590px)
-{
-    main .container .row .link, main .container .row2 .link, main .container .row .link2, main .container .row2 .link2{
-        width: 6rem;
-        height: 2rem;
-        font-size: 1rem;
-    }
-    main figure img{
-        width: 100px;
-        height: 100px;
-    }
-    .darkmodeLabel{
-        margin: 0 0 200px -100px;
-    }
-}
-@media (max-width: 495px)
-{
-    main{
-        width: 495px;
-        height: 408px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-    }
-    main .container .row, main .container .row2{
+    main .container{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    main .container .row .link, main .container .row2 .link, main .container .row .link2, main .container .row2 .link2{
-        width: 8rem;
-        height: 2rem;
-        font-size: 1rem;
-        margin: 10px;
+    main .container .row, main .container .row2{
+        display: block;
     }
+
+    main .container .row .link, 
+    main .container .row2 .link, 
+    main .container .row .link2,
+    main .container .row2 .link2{
+        width: 18rem;
+        margin: 28px 0 28px 0;
+        align-items: center;
+}
+}
+@media (max-width: 400px){
     main figure img{
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
-    .darkmodeLabel{
-        display: none;
+    main .container .row .link, 
+    main .container .row2 .link, 
+    main .container .row .link2,
+    main .container .row2 .link2{
+        width: 14rem;
+}
+}
+@media (max-width: 330px){
+    main figure img{
+        width: 80px;
+        height: 80px;
     }
+    main .container .row .link, 
+    main .container .row2 .link, 
+    main .container .row .link2,
+    main .container .row2 .link2{
+        width: 12rem;
+        font-size: 2rem;
+        height: 4rem;
+}
 }
